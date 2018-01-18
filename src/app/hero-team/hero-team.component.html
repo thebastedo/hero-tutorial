@@ -1,0 +1,16 @@
+<h2>My Team</h2>
+
+<div class="team-wrapper">
+  <div class="col-1-2">
+    <h3>Available Heroes</h3>
+    <div class="available-heroes">
+      <span *ngFor="let hero of available" (click)="add(hero)">{{hero.name}}</span>
+    </div>
+  </div>
+  <div class="col-1-2">
+    <h3>My Team</h3>
+    <div class="team-heroes">
+      <span *ngFor="let hero of teamService.team" (click)="delete(hero)">{{hero.name}}</span>
+    </div>
+  </div>
+</div>
